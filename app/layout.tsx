@@ -3,6 +3,10 @@ import type { Metadata } from "next"; // Import the Metadata type from next
 import { Geist, Geist_Mono } from "next/font/google"; // Import fonts from Google
 import "./globals.css"; // Import global styles
 
+// Importar componentes necesarios
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+
 // Definir las fuentes a utilizar
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -33,10 +37,14 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       > 
+        {/* Aqui se puede configurar los componentes Navbar, footer y aside */}
+        <Header />
+        <h1 className="text-3xl text-red-500">App Beer Frontend - Plantilla raiz</h1>
         {/* Childern recibe por props el contenido de page para renderizarlo */}
         {children} 
+        <Footer />
       </body>
     </html>
-    
+
   );
 }

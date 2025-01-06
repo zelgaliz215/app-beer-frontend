@@ -1,6 +1,10 @@
 import React from 'react'
 
 const About = () => {
+
+  throw new Error('Not implemented')
+  
+
   return (
     <>
       About
